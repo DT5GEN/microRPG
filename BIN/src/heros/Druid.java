@@ -1,3 +1,7 @@
+package heros;
+
+import models.Hero;
+
 public class Druid extends Hero {
 
 
@@ -5,12 +9,17 @@ public class Druid extends Hero {
         super(name, hp, mp, pwr);
     }
 
-    void attack () {
+    public void attack() {
         System.out.println(name + " has attack " + pwr);
     }
 
-    void guard () {
+    public void guard() {
         System.out.println(name + " has block " + pwr);
+    }
+
+    @Override
+    protected void heal(int hp) {
+        System.out.println(name + " heal up to " + (hp + 20) );
     }
 }
 

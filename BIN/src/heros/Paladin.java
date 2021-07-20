@@ -1,3 +1,7 @@
+package heros;
+
+import models.Hero;
+
 public class Paladin extends Hero {
 
     int dex;
@@ -13,12 +17,17 @@ public class Paladin extends Hero {
         this.dex = dex;
     }
 
-    void attack () {
+    @Override
+    protected void heal(int hp) {
+        System.out.println(name + " heal up to " + (hp + 10));
+    }
+
+    public void attack() {
         System.out.println(name + " has attack " + pwr);
     }
 
 
-    void guard () {
+    public void guard() {
         System.out.println(name + " has block " + pwr);
 
 

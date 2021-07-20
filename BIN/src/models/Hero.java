@@ -1,4 +1,6 @@
-public class Hero {
+package models;
+
+public abstract class Hero {
 
     protected String name;
     protected int hp;
@@ -14,12 +16,14 @@ public class Hero {
         this.pwr = pwr;
     }
 
-    void attack () {
+   public void attack () {
         System.out.println(name + " has attack " + pwr);
     }
 
-    void guard () {
+    public void guard () {
         System.out.println(name + " has block " + pwr);
     }
+
+    abstract protected void heal(int hp) ;
 
 }
