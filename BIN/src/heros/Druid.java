@@ -19,7 +19,7 @@ public class Druid extends Hero {
 
     @Override
     protected void heal(int hp) {
-        System.out.println(name + " heal up to " + (hp + 20) );
+        System.out.println(name + " heal up to " + (hp + 30) );
     }
 }
 

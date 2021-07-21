@@ -13,8 +13,19 @@ public class Main {
         Titan titan = new Titan("Титанище", 250, 60, 100, 50);
         Paladin killer = new Paladin("killer", 200, 100, 500, 100);
 
-      //  Hero hero = new Hero("Our hero", 5, 5, 5);
+       Hero []  attackGroup = {archer, paladin, druid, killer, titan};
 
+        for (int i = 0; i < attackGroup.length; i++) {
+            attackGroup[i].attack();
+            attackGroup[i].guard();
+            if (attackGroup[i] instanceof Titan) {
+
+
+               Titan titan1 = (Titan) attackGroup[i];
+               titan1.megaAttack();
+ //               ((Titan)  attackGroup[i]).megaAttack();
+            }
+        }
 
         archer.attack();
         paladin.attack();
@@ -24,8 +35,25 @@ public class Main {
         titan.guard();
 
         archer.heal(15);
+//        paladin.heal(20);
+
+
 
         System.out.println("Lovkost paladina = " + paladin.getDex());
+
+
+        int a = 5;
+        String str = "Halwing";
+
+        Object[] arr = new Object[7];
+        arr[0] = a;
+        arr[1] = str;
+        arr[2] = archer;
+        arr[3] = paladin;
+        arr[4] = attackGroup;
+        arr[5] = druid;
+
+
 
     }
 

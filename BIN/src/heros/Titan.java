@@ -21,7 +21,7 @@ public class Titan extends Paladin {
         }
 
         @Override
-    protected void heal(int hp) {
+        public void heal(int hp) {
         System.out.println(name + " heal up to " + (hp + 30) );
     }
 }
