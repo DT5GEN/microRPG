@@ -1,3 +1,4 @@
+import heros.Archer;
 import heros.Druid;
 import heros.Paladin;
 import heros.Titan;

@@ -1,3 +1,5 @@
+package heros;
+
 import models.Hero;
 
 public class Archer extends Hero {
